@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Jogo</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #7db87c;
+            padding: 20px 30px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            min-height: 500px; /* Altura mínima para expansão vertical */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        h1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            background-color: #ffffffc7;
+            padding: 8px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-style: italic;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+            flex-grow: 1; /* Permite que o formulário ocupe mais espaço */
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form textarea,
+        form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        form button {
+            width: 100%; /*tamanho do botao*/
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-style: italic;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            margin: 0 auto; /*centrarlizar o botao*/
+            display: block;
+            
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- título e informações sobre o jogo -->
+<div class="container">
+    <h1>Detalhes do Jogo: Jogo Exemplo</h1>
+    <p><strong>Descrição:</strong> Um jogo divertido para praticar inglês em sala de aula!</p>
+    <p><strong>Materiais:</strong> Cartas, papel e caneta.</p>
+
+    <!-- parte sobre comentários e nota -->
+    <h2>Deixe seu comentário e nota:</h2>
+    <form id="formComentario">
+        <label>Comentário:</label>
+        <textarea id="comentario" required></textarea>
+
+        <label>Nota (0 a 10):</label>
+        <input type="number" id="nota" min="0" max="10" required>
+
+        <button type="submit">Enviar Avaliação</button>
+    </form>
+</div>
+<script src="validacao.js"></script>
+</body>
+</html>
+
+

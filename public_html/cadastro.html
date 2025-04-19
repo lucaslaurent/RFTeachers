@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Novo Jogo</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alterado para alinhar no topo */
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #7db87c;
+            padding: 20px 30px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 900px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        h1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-style: italic;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        form button {
+            width: 100%; /*tamanho do botao*/
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-style: italic;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            margin: 0 auto; /*centrarlizar o botao*/
+            display: block;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>RAPID FIRE TEACHERS</h1>
+    <h2>Cadastre seu jogo abaixo:</h2>
+    <form id="formCadastro" onsubmit="return validarFormulario(event);">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" required></textarea>
+
+    <label for="materiais">Materiais necessários:</label>
+    <textarea id="materiais" name="materiais" required></textarea>
+
+    <button type="submit">CADASTRAR</button>
+</form>
+
+<div id="mensagemSucesso" style="display:none;"></div>
+</div>
+<script src="validacao.js"></script>
+</body>
+</html>
+
+
+
+
+

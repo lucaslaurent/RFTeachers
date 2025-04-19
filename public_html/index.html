@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapid Fire Teachers</title>
+    <link rel="stylesheet" href="seuestilo.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #7db87c;
+            padding: 20px 30px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 900px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .lista-jogos {
+            list-style-type: none;
+            padding: 0;
+            font-size: 18px;
+            margin-bottom: 200px;
+        }
+
+        .lista-jogos li {
+            background-color: #ffffff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lista-jogos a.botao {
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        .lista-jogos a.botao:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-style: italic;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form textarea,
+        form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-style: italic;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- lista dos jogos que estão cadastrados -->
+
+<div class="container">
+    <h1>RAPID FIRE TEACHERS</h1>
+    <ul class="lista-jogos">
+        <li>JOGO A <a href="detalhes.html" class="botao">VER DETALHES</a></li>
+        <li>JOGO B <a href="detalhes.html" class="botao">VER DETALHES</a></li>
+        <li>JOGO C <a href="detalhes.html" class="botao">VER DETALHES</a></li>
+        <li>JOGO D <a href="detalhes.html" class="botao">VER DETALHES</a></li>
+    </ul>
+    
+    <!-- botão para acessar a página de cadastro de novos jogos -->
+    
+    <a href="cadastro.html" class="botao">Cadastrar novo jogo</a>
+</div>
+
+
+</body>
+</html>
+
+
+
