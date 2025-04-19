@@ -6,6 +6,8 @@ Em desenvolvimento
 ## Tecnologias Utilizadas
 - Java
 - HTML
+- CSS
+- JavaScript
 
 ## Frameworks e Bibliotecas
 - (Adicionar frameworks e bibliotecas conforme necessário)
