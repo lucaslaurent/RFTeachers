@@ -28,5 +28,3 @@ O **ProjetoPI** é um sistema desenvolvido para gerenciar e disponibilizar jogos
 4. Faça o push para a branch (`git push origin feature/nome-da-feature`).
 5. Abra um pull request.
 
-## Licença
-(Adicionar informações sobre a licença, se aplicável)
