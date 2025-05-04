@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Jogos</title>
+    <style>
+       
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+          
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 100%;
+            max-width: 1410px;
+            margin: 0 auto 110px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            position: absolute; 
+            top: 15px;          
+            left: 20px; 
+            text-align: left;  
+            margin-left: 5px; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        td a {
+            margin: 0 5px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Lista de Jogos Cadastrados</h1>
+    <div class="container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Materiais</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr th:each="jogo : ${jogos}">
+                    <td th:text="${jogo.id}"></td>        
+                    <td th:text="${jogo.nome}"></td>       
+                    <td th:text="${jogo.descricao}"></td> 
+                    <td th:text="${jogo.materiais}"></td>  
+                    <td>
+                        <!-- ações para detalhes, alterar ou excluir -->
+                        <a th:href="@{'/jogo/detalhes/' + ${jogo.id}}">Detalhes</a>
+                        <a th:href="@{'/jogo/alterar/' + ${jogo.id}}">Alterar</a>
+                        <a th:href="@{'/jogo/excluir/' + ${jogo.id}}">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // função para confirmar a exclusão de um jogo
+        function confirmarExclusao(jogoId) {
+            const confirmacao = confirm("Tem certeza que deseja excluir este jogo?");
+            if (confirmacao) {
+                window.location.href = '/jogo/excluir/' + jogoId;
+            }
+        }
+
+        // ações para os links de exclusão
+        const excluirLinks = document.querySelectorAll('a[href*="/jogo/excluir/"]');
+        excluirLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const jogoId = this.getAttribute('href').split('/').pop();
+                confirmarExclusao(jogoId);
+            });
+        });
+        
+    </script>
+
+</body>
+</html>
+
